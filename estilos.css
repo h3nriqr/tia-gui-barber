@@ -1,0 +1,245 @@
+/* Paleta de cores */
+:root {
+    --primary: #606c38;
+    --secondary: #283618;
+    --background: #fefae0;
+    --accent: #dda15e;
+    --highlight: #bc6c25;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset básico */
+body, h1, h2, h3, p, ul, li, form, input, button, select, textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Corpo */
+body {
+    background-color: var(--background);
+    color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--background);
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--primary);
+    color: var(--background);
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: var(--highlight);
+    border-radius: 15px;
+}
+
+nav ul li a {
+    color: var(--background);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+li {
+    width: 750px;
+    background-color: var(--highlight);
+}
+
+/* Formulários */
+form {
+    background-color: var(--primary);
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 20px auto;
+}
+
+form label {
+    margin-left: 80px;
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--background);
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--accent);
+}
+
+button {
+    background-color: var(--highlight);
+    color: var(--background);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: var(--accent);
+}
+
+/* Tabelas */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin: 0 auto;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid var(--secondary);
+}
+
+table th {
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+table tr:nth-child(even) {
+    background-color: var(--accent);
+}
+
+/* Links */
+a {
+    color: var(--highlight);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+section {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.box, form {
+    border-radius: 50px !important;
+    width: 65%;
+}
+
+.cax {
+    border-radius: 15px !important;
+    border: 3px solid var(--secondary) !important;
+    width: 450px !important;
+}
+
+h2, h3 {
+    color: var(--secondary);
+}
+
+.card {
+    position: relative;
+    height: 350px; /* Garantir que todos os cards tenham a mesma altura */
+    overflow: hidden; /* Impede que a imagem de fundo "saia" do card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+/* Efeito de hover */
+.card:hover {
+    transform: scale(1.05); /* Aumenta o card */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+}
+
+/* Estilo da imagem de fundo */
+.card-cover {
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+
+/* Estilo do conteúdo do card */
+.card-body {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.custom-btn {
+    width: 400px !important;
+    background-color: var(--primary) !important;
+    border: 0 !important;
+    height: 50px !important;
+    border-radius: 25px !important;
+    transition: background-color 0.2s ease;
+}
+
+.custom-btn:hover {
+    background-color: var(--secondary) !important;
+}
+
+#subiiiuuuuu {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    display: none; /* Inicialmente invisível */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+/* Hover para o botão */
+#subiiiuuuuu:hover {
+    background-color: var(--secondary);
+}
+
+/* Efeito de opacidade e transformação ao aparecer */
+#subiiiuuuuu.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+/* Se desejar algum efeito quando o botão for ocultado */
+#subiiiuuuuu.hide {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.botao {
+    background-color: var(--accent) !important;
+    border: 0 !important;
+    height: 45px !important;
+    border-radius: 25px !important;
+    transition: background-color 0.2s ease;
+    width: 575px !important;
+}
+
+.botao:hover {
+    background-color: var(--highlight) !important;
+}
